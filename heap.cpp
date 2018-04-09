@@ -1,3 +1,9 @@
+/* Heap
+ * written by Jason Shi
+ * Creates a heap of numbers that are inputted 
+ */
+
+
 #include <cstring>
 #include <iostream>
 #include <cstdlib>
@@ -97,7 +103,14 @@ int main(){
 			
 		}
 		
-	}		
-	//delete array
-	delete[] stor;
+	}
+    cout <<" " << endl; 
+	cout << "Output sequence: ";
+    for(int i = count; i>0; i--){
+        cout << stor[1] << " ";
+        stor[1] = stor[i];
+        stor[i] = 0;
+        build(stor, i);
+    }
+
 }
